@@ -1,0 +1,17 @@
+.cell{
+
+height:35px;
+
+width:35px;
+
+border:1px solid #000;
+
+background:red;
+
+}
+
+.cell.alt{
+
+background:black;
+
+}
