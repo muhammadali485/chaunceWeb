@@ -1,0 +1,78 @@
+<html>
+
+   <head>
+      
+       <script type="text/javascript">
+          
+           //Function that returns gross pay
+           function grossPay(hrs)
+           {
+               //Regular pay
+               if(hrs <= 40)
+               {
+                   return (hrs * 15);
+               }
+              
+               //OT Pay
+               else
+               {
+                   return ( (40*15) + ( (hrs-40) * 1.5 * 15 ) );
+               }
+           }
+          
+           //Function that gets called when page loads
+           function process()
+           {
+               //Array declaration
+               var arr = [];
+               var i = 1;
+              
+               // open-ended loop
+               while(true)
+               {
+                   //Prompting user
+                   var val = prompt("Please input number of hours worked by Emp #" + (i) + ": ", 0);
+                  
+                   //Converting to integer
+                   val = parseInt(val);
+                  
+                   //If user enters a sentinel value
+                   if(val == -1)
+                       break;
+                  
+                   //Storing values into array
+                   arr.push(val);
+                  
+                   i++;
+               }
+              
+               //Table Creation
+               document.write("<table border=1 align=\"center\">");
+              
+               document.write("<tr>");
+               document.write("<td> Employee # </td>");
+               document.write("<td> Hours Worked </td>");
+               document.write("<td> Gross Pay(in $) </td>");
+               document.write("</tr>");
+              
+               //Iterating over each element
+               for(i=0; i<arr.length; i++)
+               {
+                   document.write("<tr>");
+                   document.write("<td>" + (i+1) + "</td>");
+                   document.write("<td>" + arr[i] + "</td>");
+                   document.write("<td>" + grossPay(arr[i]).toFixed(2) + "</td>");
+                   document.write("</tr>");
+               }
+              
+               document.write("</table>");
+           }
+          
+       </script>
+  
+   </head>
+  
+   <body onload="process()">
+   </body>
+
+</html>
