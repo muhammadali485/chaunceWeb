@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="fifteen.js" type="text/javascript"></script>
+	</head>
+
+
+	<body>
+		<div id="uniq">
+			<div class="js-container container">
+							<h1>You Win!!</h1>
+			</div>
+			<button id="button">Return</button>
+		</div>
+		<audio id="aud" autoplay="true" loop="true">
+			<source src="No-Monkey.wav" type="audio/wav">
+		</audio>
+		<audio id="aud2" autoplay="true" loop="true">
+			<source src="fanfare.mp3" type="audio/mpeg">
+		</audio>
+
+		<div id="everything">
+			<div id="best">
+				<h4>Best Record</h4>
+				<span class="text">MOVES:</span>
+				<span id="bestmoves">999</span>
+				<span class="text">TIME:</span>
+				<span id="besttime">999</span>
+			</div>
+
+			<select id="image" onChange="setImage(this);">
+				<option value="image1">Image 1</option>
+				<option value="image2">Image 2</option>
+				<option value="image3">Image 3</option>
+				<option value="image4">Image 4</option>
+				<option value="image5">Image 5</option>
+				<option value="image6">Image 6</option>
+			</select>
+
+			<div id="gameContainer"></div>
+
+			<div id="controls">
+				<button id="shuffle">Shuffle</button>
+
+				<select id="box" onChange="setBackground(this);">
+					<option value="back1">Background 1</option>
+					<option value="back2">Background 2</option>
+					<option value="back3">Background 3</option>
+					<option value="back4">Background 4</option>
+					<option value="back5">Background 5</option>
+					<option value="back6">Background 6</option>
+				</select>
+
+				<div id="scorer">
+					<span class="text">MOVES:</span>
+					<span id="moves">0</span>
+					<span class="text">TIME:</span>
+					<span id="timer">0</span>
+				</div>
+			</div>
+
+		</div>
+	</body>
+
+</html>
